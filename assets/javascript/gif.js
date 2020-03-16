@@ -1,6 +1,23 @@
 $(document).ready(function(){
 
 
+  
+  $("#addani").on("click", function(event){
+    event.preventDefault();
+ 
+    var userAnimal = $("#userAni").val().trim()
+
+    var newBtn = $("<button>")
+
+    $(newBtn).addClass("btn btn-secondary btn-sm anibtn")
+    $(newBtn).attr("data-animal", userAnimal)
+    $(newBtn).text(userAnimal)
+    $("#btns").append(newBtn)
+
+
+
+  });
+
 $(".anibtn").on("click", function() {
     var animal = $(this).attr("data-animal");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -30,11 +47,6 @@ $(".anibtn").on("click", function() {
         }
       });
 
-   // $("#addani").on("click", function(event){
-   //   event.preventDefault();
-
-
-   // });
   });
 
 
