@@ -1,8 +1,11 @@
-$("button").on("click", function() {
-    var person = $(this).attr("data-person");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-      person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+$(document).ready(function(){
 
+
+$(".anibtn").on("click", function() {
+    var animal = $(this).attr("data-animal");
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+      animal + "&api_key=CAaRfHZXWFQtgLzOAXEeQaCC22T3PV3U&limit=10";
+  console.log("a button was clicked")
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -23,7 +26,16 @@ $("button").on("click", function() {
           gifDiv.prepend(p);
           gifDiv.prepend(personImage);
 
-          $("#gifs-appear-here").prepend(gifDiv);
+          $("#gifs").prepend(gifDiv);
         }
       });
+
+   // $("#addani").on("click", function(event){
+   //   event.preventDefault();
+
+
+   // });
   });
+
+
+});
