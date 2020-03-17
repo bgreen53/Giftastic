@@ -1,0 +1,27 @@
+body{
+    background-image: url(../images/jungle-background-4301.jpeg);
+}
+
+h1{
+    color: darkgrey;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-family: 'Caveat', cursive;
+    font-size: 80px;
+    font-weight: bolder;
+    
+}
+
+p{
+    color: darkgray;
+    font-size: 20px;
+}
+
+img{
+    border: 2px solid black;
+}
+
+#btns{
+    background: black;
+    padding-bottom: 5px;
+}

@@ -6,8 +6,9 @@ $(document).ready(function(){
     event.preventDefault();
  
     var userAnimal = $("#userAni").val().trim()
-
     var newBtn = $("<button>")
+
+    
 
     $(newBtn).addClass("btn btn-secondary btn-sm anibtn")
     $(newBtn).attr("data-animal", userAnimal)
@@ -45,9 +46,15 @@ $(document).on("click", ".anibtn", function() {
           gifDiv.prepend(p);
           gifDiv.prepend(personImage);
 
-          $("#gifs").prepend(gifDiv);
+         $("#gifs").prepend(gifDiv);
         }
       });
+
+  });
+
+  $("#clear").on("click",function(event){
+    event.preventDefault();
+    $("#gifs").empty()
 
   });
 
