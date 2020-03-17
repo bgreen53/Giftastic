@@ -13,12 +13,14 @@ $(document).ready(function(){
     $(newBtn).attr("data-animal", userAnimal)
     $(newBtn).text(userAnimal)
     $("#btns").append(newBtn)
+    $("#aniForm").trigger("reset")
+    $(newBtn).after(" ")
 
 
 
   });
 
-$(".anibtn").on("click", function() {
+$(document).on("click", ".anibtn", function() {
     var animal = $(this).attr("data-animal");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       animal + "&api_key=CAaRfHZXWFQtgLzOAXEeQaCC22T3PV3U&limit=10";
